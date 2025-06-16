@@ -22,6 +22,31 @@ def get_css_color(variable: str) -> str:
 background_color = get_css_color("--c-mantle")
 main_color = get_css_color("--c-lavender")
 
+def load_svg(file_path: str) -> str:
+    with open(file_path, "r", encoding="utf-8") as file:
+        return file.read()
+
+loading_html = f"""
+    <style>
+        body {{ height: 100%; width: 100%; position: fixed; display: flex; justify-content: center; align-items: center;
+                flex-direction: column; background-color: {background_color}; color: {main_color}; margin: 0px; gap: 3em; }}
+        .loader {{ width: 50px; height: 50px; border: 5px solid {main_color}; border-top: 5px solid transparent;
+                border-radius: 50%; animation: spin 1.5s linear infinite; }}
+        .logo {{ height: 200px; }}
+        @keyframes spin {{ 100% {{ transform: rotate(360deg); }} }}
+    </style>
+    <body>
+        {load_svg(os.path.join(paths.icons_dir, "app-icon.svg"))}
+        <div class="loader"></div>
+    </body>
+"""
+
+
+app.native.window_args = {
+    'background_color': background_color,
+    'html': loading_html
+}
+
 if not getattr(sys, 'frozen', False):
     app.native.start_args['debug'] = True
     app.native.start_args['private_mode'] = False
@@ -55,7 +80,7 @@ run_args = {
 # ----------------------------------------------------- #
 
 with ui.column().classes("h-full w-full"):
-    ui.label("Placeholder")
+    ui.label("Example")
         
 
 ui.run(**run_args)
