@@ -1,0 +1,54 @@
+:root {
+    --nicegui-default-padding: 0.5em;
+    --nicegui-default-gap: 0.5em;
+}
+
+.bg-crust { background-color: var(--c-crust); }
+.bg-mantle { background-color: var(--c-mantle); }
+.bg-base { background-color: var(--c-base); }
+.bg-surface0 { background-color: var(--c-surface0); }
+.bg-surface1 { background-color: var(--c-surface1); }
+.bg-surface2 { background-color: var(--c-surface2); }
+.bg-overlay0 { background-color: var(--c-overlay0); }
+.bg-overlay1 { background-color: var(--c-overlay1); }
+.bg-overlay2 { background-color: var(--c-overlay2); }
+.bg-subtext0 { background-color: var(--c-subtext0); }
+.bg-subtext1 { background-color: var(--c-subtext1); }
+.bg-text { background-color: var(--c-text); }
+.bg-lavender { background-color: var(--c-lavender); }
+.bg-blue { background-color: var(--c-blue); }
+.bg-sapphire { background-color: var(--c-sapphire); }
+.bg-sky { background-color: var(--c-sky); }
+.bg-teal { background-color: var(--c-teal); }
+.bg-green { background-color: var(--c-green); }
+.bg-yellow { background-color: var(--c-yellow); }
+.bg-peach { background-color: var(--c-peach); }
+.bg-maroon { background-color: var(--c-maroon); }
+.bg-red { background-color: var(--c-red); }
+.bg-mauve { background-color: var(--c-mauve); }
+.bg-pink { background-color: var(--c-pink); }
+.bg-flamingo { background-color: var(--c-flamingo); }
+.bg-rosewater { background-color: var(--c-rosewater); }
+
+body {
+    overflow: hidden;
+    --scrollbarBG: transparent;
+    --thumbBG: var(--c-surface2);
+    --card-border-radius: 8px;
+
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+    font-family: 'Metropolis';
+}
+
+body.body--dark {
+    background: var(--c-mantle);
+}
+
+* {
+    user-select: none;
+}
+
+.nicegui-content {
+    height: 100vh;
+    padding: 0.5em;
+}

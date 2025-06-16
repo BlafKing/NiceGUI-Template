@@ -1,0 +1,57 @@
+/*
+Welcome to the theme configuration file!
+
+This file controls the main color scheme of the app.
+Feel free to customize it to your liking!
+
+Changes will take effect after restarting the app.
+Note: All entries are required, there may be errors of not all entries are present!
+*/
+
+:root {
+
+    /* 
+    Catppuccin Mocha Palette
+    https://catppuccin.com/palette
+    */
+    
+    --c-crust: #11111b;
+    --c-mantle: #181825;
+    --c-base: #1e1e2e;
+    --c-surface0: #313244;
+    --c-surface1: #45475a;
+    --c-surface2: #585b70;
+    --c-overlay0: #6c7086;
+    --c-overlay1: #7f849c;
+    --c-overlay2: #9399b2;
+    --c-subtext0: #a6adc8;
+    --c-subtext1: #bac2de;
+    --c-text: #cdd6f4;
+    --c-lavender: #b4befe;
+    --c-blue: #89b4fa;
+    --c-sapphire: #74c7ec;
+    --c-sky: #89dceb;
+    --c-teal: #94e2d5;
+    --c-green: #a6e3a1;
+    --c-yellow: #f9e2af;
+    --c-peach: #fab387;
+    --c-maroon: #eba0ac;
+    --c-red: #f38ba8;
+    --c-mauve: #cba6f7;
+    --c-pink: #f5c2e7;
+    --c-flamingo: #f2cdcd;
+    --c-rosewater: #f5e0dc;
+    --c-primary: var(--c-overlay0);
+
+    /* NiceGUI / Quasar Replacements */
+    --q-primary: var(--c-lavender);
+    --q-secondary: var(--c-teal);
+    --q-accent: var(--c-mauve);
+    --q-positive: var(--c-green);
+    --q-negative: var(--c-red);
+    --q-info: var(--c-sapphire);
+    --q-warning: var(--c-peach);
+    --q-dark: var(--c-base);
+    --q-dark-page: var(--c-mantle);
+
+}
